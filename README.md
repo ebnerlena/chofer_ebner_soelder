@@ -1,4 +1,5 @@
 # Chris Hofer Wordpress
+## by Lena Ebner  and Simon Sölder
 
 Chris is a great singer focussing on popular music. Chris is located in Salzburg and has won several prizes.  
 Chris is a playful, trendy person who easily finds an audience.
