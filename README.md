@@ -38,6 +38,13 @@ Must use:
 Must NOT
 * use photos/graphics whose rights you don't own.
 
+## Development
+
+### Running with docker
+Uses standard wp install and the public/wp-content folder
+```bash
+docker-compose up
+```
 
 ## Timeline
 
