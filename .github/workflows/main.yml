@@ -15,7 +15,7 @@ jobs:
       env:
         dest: 'deploy@193.170.119.171:/var/www/chris/' 
       run: |
-        echo "${{secrets.DEPLOY_KEY}}" > deploy_key
+        echo "${{secrets.CHRIS_KEY}}" > deploy_key
         chmod 600 ./deploy_key
         rsync -chav --delete \
           -e 'ssh -p 5412 -i ./deploy_key -o StrictHostKeyChecking=no' \
