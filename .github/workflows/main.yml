@@ -11,6 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
+      
     - name: Sync
       env:
         dest: 'deploy@193.170.119.171:/var/www/chris/' 
