@@ -13,7 +13,7 @@ jobs:
       
     - name: Sync
       env:
-        dest: 'deploy@193.170.119.171:/var/www/chris/' 
+        dest: 'www-data@193.170.119.171:/var/www/chris/' 
       run: |
         echo "${{secrets.DEPLOY_KEY}}" > deploy_key
         chmod 600 ./deploy_key
