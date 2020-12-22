@@ -1,0 +1,101 @@
+.footer {
+
+    background-color: $primaryColor;
+    color: $basicTextColor;
+
+    .footer__top-container {
+        height:25vh;
+        display:grid;
+        grid-template-columns: 6fr 4fr;
+
+        @include mobile {
+            display:flex;
+            flex-direction: column;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+            display:flex;
+            padding:0;
+            flex-direction: row;
+            justify-content: space-between;
+
+            @include mobile {
+                display:flex;
+                flex-direction: row;
+            }
+
+            li {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                a {
+                    text-decoration:none;
+                    color: $accentColor;
+                }
+
+                a:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+        .top-container__left {
+            ul {
+                justify-content: flex-start;
+            }
+        }
+
+        .top-container__right {
+            
+            justify-content: flex-end;
+
+            @include mobile {
+                padding: 1rem;
+            }
+
+            .footer__social-nav {
+                color: $accentColor;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+
+                .social-nav__prefix {
+                    white-space: nowrap;
+                }
+
+            }
+
+            .footer__contact-details {
+
+                p {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    span:first-child {
+                        width: 5rem;
+                    }
+                }
+                
+            }
+            
+
+        }
+
+    }
+
+    .footer__bottom-container {
+        height:10vh;
+        background-color: $accentColor;
+        color: $primaryColor;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        .footer__copyright {
+            margin-right: 2rem;
+        }
+
+    }
+
+}
