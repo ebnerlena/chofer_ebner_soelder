@@ -35,6 +35,29 @@
             I do them all
         </div>
     </section>
+
+    <section class="index__gigs">
+        <h2>Upcoming <span>Gigs</span></h2>
+        <div class="gigs__container maxwidthcontainer">
+
+        </div>
+    </section>
+
+    <section class="index__news">
+        <h2>Latest <span>News</span></h2>
+        <div class="news__container maxwidthcontainer">
+           {% for post in news %}
+            <article class="news__single-post">
+                <div class="news__start-style"></div>
+                <div class="news__content">
+                    <h3>{{ post.title }}</h3> 
+                    <p> {{ post.get_preview(50) }} </p>
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+    </section>
+
     <section class="index__services">
         <h2><span>Book</span> me</h2>
         <div class="services__container maxwidthcontainer"> 
