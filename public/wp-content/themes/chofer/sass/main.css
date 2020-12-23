@@ -231,31 +231,32 @@ section {
   height: 100vh;
   background-image: url("../images/pexels-edward-eyer-811838.jpg");
   background-size: cover; }
-  .index__header .content {
-    margin: auto;
+
+.content {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 90%;
+  height: 80%; }
+  .content .music-player {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 90%;
-    height: 80%; }
-    .index__header .content .music-player {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 20%;
-      height: 14%;
-      color: white; }
-    .index__header .content .book-now-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px;
-      color: white;
-      background-color: #B57614;
-      width: 20%;
-      height: 14%;
-      font-size: 3rem;
-      font-weight: bold; }
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 14%;
+    color: white; }
+  .content .book-now-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    background-color: #B57614;
+    width: 20%;
+    height: 14%;
+    font-size: 3rem;
+    font-weight: bold; }
 
 .topnav {
   display: flex;
@@ -278,6 +279,9 @@ section {
       .topnav .nav-main ul li a {
         font-size: 2rem;
         color: white; }
+
+.single_header {
+  height: 50vh; }
 
 .footer {
   background-color: #1E1F21;
@@ -354,7 +358,8 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
     @media (max-width: 900px) {
       .index__services .services__container {
         flex-direction: column; } }
@@ -379,6 +384,7 @@ section {
         white-space: nowrap;
         font-weight: 800;
         font-size: 1.6rem;
+        color: black;
         margin-top: 0;
         padding-top: 0.7rem;
         padding-bottom: 0.7rem;
@@ -424,6 +430,70 @@ section {
       margin-left: 2rem;
       margin-top: 1rem;
       margin-bottom: 1rem; }
+
+.index__news {
+  background-image: url("../images/pexels-erkan-utu-302655.jpg");
+  background-size: cover; }
+  .index__news .news__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 55%;
+    max-width: 40rem;
+    margin-left: 5rem;
+    align-self: start;
+    margin-top: 4rem;
+    margin-bottom: 7rem; }
+    @media (max-width: 900px) {
+      .index__news .news__container {
+        width: 90vw;
+        margin-left: auto; } }
+    .index__news .news__container .news__single-post {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 10px;
+      height: 13vh;
+      width: 100%;
+      margin-bottom: 1rem;
+      margin-top: 1rem; }
+      @media (max-width: 900px) {
+        .index__news .news__container .news__single-post {
+          height: 15vh; } }
+      .index__news .news__container .news__single-post .news__start-style {
+        background-color: #B57614;
+        width: 20px;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px; }
+      .index__news .news__container .news__single-post .news__content {
+        background-color: #C4C4C4;
+        color: black;
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-left: 1rem;
+        padding-right: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        @media (max-width: 900px) {
+          .index__news .news__container .news__single-post .news__content {
+            padding-right: 0; } }
+        .index__news .news__container .news__single-post .news__content h3 {
+          margin: 0;
+          padding-top: 5px; }
+        .index__news .news__container .news__single-post .news__content p {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.5rem; }
+          .index__news .news__container .news__single-post .news__content p a {
+            color: black;
+            text-decoration: underline;
+            font-weight: 800;
+            margin-top: 0.5rem; }
 
 h1 {
   font-family: 'East Sea Dokdo';
