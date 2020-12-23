@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block header %}
+	<section class="index__header">
+        <div class="topnav">
+					<h1 class="logo-h1" role="banner">
+						<a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
+					</h1>
+					<nav id="nav-main" class="nav-main" role="navigation">
+						{% include "menu.twig" with {'items': mainmenu.get_items} %}
+					</nav><!-- #nav -->
+        </div>
+        <div class="content">
+            <div class="music-player">
+                <span>PLACEHOLDER</span>
+            </div>
+            <a href="#" class="book-now-button">
+                BOOK NOW!
+            </a>
+        </div>
+	</section>
+{% endblock %}
+
+{% block content %}
+    <section class="index__about">
+        <h2>Who am I?</h2>
+        <div class="about-img">
+        </div>
+        <div class="about-text">
+            Hi, i’m Chris! 
+            I’ve been playing music since i was a child 
+            and have never stopped chasing my musical dreams. 
+            Check out my music at soundcloud and book me for every event you like.
+            Birthdays, Christmas Events, Gigs...
+            I do them all
+        </div>
+    </section>
+{% endblock %}

@@ -13,7 +13,7 @@ jobs:
       
     - name: Sync
       env:
-        dest: 'deploy@193.170.119.171:/var/www/chris/' 
+        dest: 'deployboy@193.170.119.171:/var/www/chris/' 
       run: |
         echo "${{secrets.DEPLOY_KEY}}" > deploy_key
         chmod 600 ./deploy_key
@@ -22,6 +22,8 @@ jobs:
           --exclude /deploy_key \
           --exclude /.git/ \
           --exclude /.github/ \
+          --exclude /public/wp-content/uploads/ \
+          --exclude /public/wp-content/plugins/ \
           --exclude /public/wp-config.php \
           --exclude /node_modules/ \
           ./public/ ${{env.dest}}
