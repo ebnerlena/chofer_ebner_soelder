@@ -22,7 +22,7 @@ jobs:
           --exclude /deploy_key \
           --exclude /.git/ \
           --exclude /.github/ \
-          --exclude /public/wp-content/uploads/* \
+          --exclude /public/wp-content/uploads/ \
           --exclude /public/wp-content/plugins/ \
           --exclude /public/wp-config.php \
           --exclude /node_modules/ \
