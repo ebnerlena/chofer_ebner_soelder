@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block header %}
+	<section class="single__header">
+        <div class="topnav">
+					<h1 class="logo-h1" role="banner">
+						<a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
+					</h1>
+					<nav id="nav-main" class="nav-main" role="navigation">
+						{% include "menu.twig" with {'items': mainmenu.get_items} %}
+					</nav><!-- #nav -->
+        </div>
+        <div class="content">
+            <div class="music-player">
+                <span>PLACEHOLDER</span>
+            </div>
+            <a href="#" class="book-now-button">
+                BOOK NOW!
+            </a>
+        </div>
+	</section>
+{% endblock %}
+
+{% block content %}
+    <article class="single__post-container maxwidthcontainer"> 
+    <h2>Single Post Page</h>
+    </article>
+{% endblock %}

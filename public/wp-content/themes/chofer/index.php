@@ -10,5 +10,4 @@
 // }
 Timber::render( $templates, $context );
 
-
 ?>
