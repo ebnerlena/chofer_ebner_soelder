@@ -1,7 +1,7 @@
 @import "_colors.scss";
 
 .index__header { 
-    width: 100vw;
+    //width: 100vw;
     height: 100vh;
     background-image: url("../images/pexels-edward-eyer-811838.jpg");
     background-size: cover;
@@ -28,7 +28,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 10px;
+            border-radius: $default_border_radius;
             color: white;
             background-color: $accentColor;
             width: 20%;
@@ -60,6 +60,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            list-style: none;
             li {
                 a {
                 font-size: 2rem;
