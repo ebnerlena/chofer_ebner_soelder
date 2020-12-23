@@ -278,17 +278,18 @@ class StarterSite extends Timber\Site {
 
 	}
 
+
 	/** This is where you add some context
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
 	 */
 	public function add_to_context( $context ) {
-		$context['foo']   = 'bar';
-		$context['stuff'] = 'I am a value set in your functions.php file';
-		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		$context['legalmenu']  = new Timber\Menu("legal-menu");
 		$context['mainmenu']  = new Timber\Menu("main-menu");
 		$context['socialmenu']  = new Timber\Menu("social-menu");
+		$context['services'] = Timber::get_posts(['post_type' => 'post','category_name' => 'services', 'order' => 'ASC']);
+		$context['gigs'] = Timber::get_posts(['post_type' => 'post','category_name' => 'gigs']);
+		$context['news'] = Timber::get_posts(['post_type' => 'post','category_name' => 'news']);
 		$context['site']  = $this;
 		return $context;
 	}

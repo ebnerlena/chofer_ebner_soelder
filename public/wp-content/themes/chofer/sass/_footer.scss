@@ -21,14 +21,8 @@
             flex-direction: row;
             justify-content: space-between;
 
-            @include mobile {
-                display:flex;
-                flex-direction: row;
-            }
-
             li {
-                padding-left: 1rem;
-                padding-right: 1rem;
+                padding-right: $default_padding;
                 a {
                     text-decoration:none;
                     color: $accentColor;
@@ -42,6 +36,11 @@
         .top-container__left {
             ul {
                 justify-content: flex-start;
+                margin-left: $default_margin;
+
+                @include mobile {
+                    margin-left:1rem;
+                }
             }
         }
 
@@ -59,6 +58,10 @@
                 justify-content: space-between;
                 flex-direction: row;
 
+                ul {
+                    margin-right: $default_margin;
+                }
+
                 .social-nav__prefix {
                     white-space: nowrap;
                 }
@@ -70,6 +73,7 @@
                 p {
                     display: flex;
                     justify-content: flex-start;
+                    color: $greyAccentColor;
 
                     span:first-child {
                         width: 5rem;
@@ -93,7 +97,7 @@
         align-items: flex-start;
 
         .footer__copyright {
-            margin-right: 2rem;
+            margin-right: $default_margin;
         }
 
     }
