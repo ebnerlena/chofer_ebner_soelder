@@ -60,8 +60,29 @@ docker ps
 
 # import dump
 docker exec -i <id> mysql -u<user> -p<password> <dbname> < dump.sql
+# example:
 docker exec -i 5d60ff3143dd mysql -uwp -p12345678 wp < chris_dump.sql
 
+# UPDATE URL REFERENCES
+# connect to mysql shell
+docker exec -it <id> -u<user> -p<password>
+```
+
+Update URL References:
+
+```bash
+# connect to mysql shell
+docker exec -it <id> mysql -u<user> -p<password>
+```
+
+```sql
+UPDATE wp_options SET option_value = replace(option_value, 'https://chris.vm-aqua.soelder.net', 'http://localhost:8080') WHERE option_name = 'home' OR option_name = 'siteurl';
+
+UPDATE wp_posts SET guid = replace(guid, 'https://chris.vm-aqua.soelder.net','http://localhost:8080');
+
+UPDATE wp_posts SET post_content = replace(post_content, 'https://chris.vm-aqua.soelder.net','http://localhost:8080');
+
+UPDATE wp_postmeta SET meta_value = replace(meta_value, 'https://chris.vm-qua.soelder.net','http://localhost:8080');
 ```
 
 ### SQL dump e.g. from server to local
