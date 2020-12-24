@@ -54,6 +54,11 @@ docker-compose up
 
 Importing sql dump into local db container:
 
+**with shell script**
+Copy the sample shell script and edit the variables -> run -> win
+
+**manual way**
+
 ```bash
 # Get id of db container
 docker ps
@@ -72,7 +77,7 @@ Update URL References:
 
 ```bash
 # connect to mysql shell
-docker exec -it <id> mysql -u<user> -p<password>
+docker exec -it <id> mysql -u<user> -p<password> <dbname>
 ```
 
 ```sql
