@@ -54,7 +54,8 @@ docker-compose up
 
 Importing sql dump into local db container:
 
-**with shell script**
+**PREFERRED: with shell script**
+
 Copy the sample shell script and edit the variables -> run -> win
 
 **manual way**
