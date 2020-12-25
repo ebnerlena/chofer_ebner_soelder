@@ -265,6 +265,7 @@ section {
 }
 section > h2 {
   margin-left: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 section > h2 span {
@@ -283,6 +284,7 @@ section > h2 span {
   height: 100vh;
   background-image: url("../images/pexels-edward-eyer-811838.jpg");
   background-size: cover;
+  padding-bottom: 0;
 }
 
 .content {
@@ -616,7 +618,7 @@ section > h2 span {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
 }
 .index__gigs .gigs__container .gigs__single-post {
@@ -671,6 +673,47 @@ section > h2 span {
   border-radius: 10px;
   color: #FFFFFF;
   font-size: 1.5rem;
+}
+
+.index__about {
+  height: 80vh;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "about-img about-text";
+}
+.index__about .about-img {
+  grid-area: about-img;
+  background-image: url("../images/pexels-pixabay-210922.jpg");
+  background-size: cover;
+  border-radius: 0 0 10px 0;
+}
+.index__about .about-text {
+  grid-area: about-text;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.index__about .about-text h2 {
+  font-size: 2.5rem;
+}
+.index__about .about-text h2 span {
+  font-weight: 800;
+}
+.index__about .about-text article {
+  padding-right: 30%;
+}
+.index__about .about-text article p {
+  font-size: 1.8rem;
+  line-height: 120%;
+}
+.index__about .about-text article p:first-of-type {
+  font-size: 2rem;
+}
+.index__about .about-text article span {
+  color: #B57614;
 }
 
 h1 {
