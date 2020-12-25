@@ -299,6 +299,7 @@ class StarterSite extends Timber\Site
         $context['services'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'services', 'order' => 'ASC']);
         $context['gigs'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'gigs', 'posts_per_page' => 3]);
         $context['news'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'news', 'posts_per_page' => 3]);
+        $context['frontpage'] = Timber::get_post(get_option("page_on_front"));
         $context['site']  = $this;
         return $context;
     }
