@@ -1,76 +1,75 @@
 @import "_colors.scss";
 
-.index__header { 
-    //width: 100vw;
-    height: 100vh;
-    background-image: url("../images/pexels-edward-eyer-811838.jpg");
-    background-size: cover;
+.index__header {
+  //width: 100vw;
+  height: 100vh;
+  background-image: url("../images/pexels-edward-eyer-811838.jpg");
+  background-size: cover;
+  padding-bottom: 0;
 }
-    .content {
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 90%;
-        height: 80%;
+.content {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 90%;
+  height: 80%;
 
-        .music-player {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 20%;
-            height: 14%;
-            color: white;
+  .music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 14%;
+    color: white;
+  }
 
-        }
-
-        .book-now-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: $default_border_radius;
-            color: white;
-            background-color: $accentColor;
-            width: 20%;
-            height: 14%;
-            font-size: 3rem;
-            font-weight: bold;
-        }
-    }
-
+  .book-now-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $default_border_radius;
+    color: white;
+    background-color: $accentColor;
+    width: 20%;
+    height: 14%;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}
 
 .topnav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
 
-    .logo-h1 {
-        margin-left: 3%;
+  .logo-h1 {
+    margin-left: 3%;
+    a {
+      font-family: "East Sea Dokdo";
+      font-size: 6rem;
+      color: white;
+    }
+  }
+
+  .nav-main {
+    width: 40%;
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      li {
         a {
-            font-family: "East Sea Dokdo";
-            font-size: 6rem;
-            color: white;
+          font-size: 2rem;
+          color: white;
         }
+      }
     }
-
-    .nav-main {
-        width: 40%;
-        ul {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            list-style: none;
-            li {
-                a {
-                font-size: 2rem;
-                color: white;
-                }
-            }
-        }
-    }
+  }
 }
 
 .single_header {
-    height: 50vh;
+  height: 50vh;
 }

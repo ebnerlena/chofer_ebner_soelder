@@ -233,14 +233,44 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
-/* exo-regular - latin */
+/* exo-500 - latin */
 @font-face {
   font-family: "Exo";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/exo-v11-latin-regular.eot");
+  font-weight: 500;
+  src: url("../fonts/exo-v11-latin-500.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/exo-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-latin-regular.woff2") format("woff2"), url("../fonts/exo-v11-latin-regular.woff") format("woff"), url("../fonts/exo-v11-latin-regular.ttf") format("truetype"), url("../fonts/exo-v11-latin-regular.svg#Exo") format("svg");
+  src: local(""), url("../fonts/exo-v11-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-latin-500.woff2") format("woff2"), url("../fonts/exo-v11-latin-500.woff") format("woff"), url("../fonts/exo-v11-latin-500.ttf") format("truetype"), url("../fonts/exo-v11-latin-500.svg#Exo") format("svg");
+  /* Legacy iOS */
+}
+/* exo-700 - latin */
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/exo-v11-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/exo-v11-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-latin-700.woff2") format("woff2"), url("../fonts/exo-v11-latin-700.woff") format("woff"), url("../fonts/exo-v11-latin-700.ttf") format("truetype"), url("../fonts/exo-v11-latin-700.svg#Exo") format("svg");
+  /* Legacy iOS */
+}
+/* exo-800 - latin */
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/exo-v11-latin-800.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/exo-v11-latin-800.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-latin-800.woff2") format("woff2"), url("../fonts/exo-v11-latin-800.woff") format("woff"), url("../fonts/exo-v11-latin-800.ttf") format("truetype"), url("../fonts/exo-v11-latin-800.svg#Exo") format("svg");
+  /* Legacy iOS */
+}
+/* exo-900 - latin */
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/exo-v11-latin-900.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/exo-v11-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-latin-900.woff2") format("woff2"), url("../fonts/exo-v11-latin-900.woff") format("woff"), url("../fonts/exo-v11-latin-900.ttf") format("truetype"), url("../fonts/exo-v11-latin-900.svg#Exo") format("svg");
   /* Legacy iOS */
 }
 /* east-sea-dokdo-regular - latin */
@@ -265,6 +295,7 @@ section {
 }
 section > h2 {
   margin-left: 2rem;
+  font-size: 2.5rem;
   font-weight: 500;
 }
 section > h2 span {
@@ -283,6 +314,7 @@ section > h2 span {
   height: 100vh;
   background-image: url("../images/pexels-edward-eyer-811838.jpg");
   background-size: cover;
+  padding-bottom: 0;
 }
 
 .content {
@@ -616,7 +648,7 @@ section > h2 span {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
 }
 .index__gigs .gigs__container .gigs__single-post {
@@ -671,6 +703,47 @@ section > h2 span {
   border-radius: 10px;
   color: #FFFFFF;
   font-size: 1.5rem;
+}
+
+.index__about {
+  height: 80vh;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "about-img about-text";
+}
+.index__about .about-img {
+  grid-area: about-img;
+  background-image: url("../images/pexels-pixabay-210922.jpg");
+  background-size: cover;
+  border-radius: 0 0 10px 0;
+}
+.index__about .about-text {
+  grid-area: about-text;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.index__about .about-text h2 {
+  font-size: 2.5rem;
+}
+.index__about .about-text h2 span {
+  font-weight: 800;
+}
+.index__about .about-text article {
+  padding-right: 30%;
+}
+.index__about .about-text article p {
+  font-size: 1.8rem;
+  line-height: 120%;
+}
+.index__about .about-text article p:first-of-type {
+  font-size: 2rem;
+}
+.index__about .about-text article span {
+  color: #B57614;
 }
 
 h1 {
