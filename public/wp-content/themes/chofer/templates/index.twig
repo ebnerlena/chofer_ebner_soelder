@@ -12,7 +12,10 @@
         </div>
         <div class="content">
             <div class="music-player">
-                <span>PLACEHOLDER</span>
+                <span>{{frontpage.meta("title")}}</span>
+                <audio controls>
+                    <source src={{frontpage.meta("audio")}}>
+                </audio>
             </div>
             <a href="#" class="book-now-button">
                 BOOK NOW!
