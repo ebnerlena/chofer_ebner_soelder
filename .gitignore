@@ -25,3 +25,5 @@ node_modules/
 public/wp-config.php
 node-modules/
 *:Zone.Identifier
+
+docker-import.sh
