@@ -1,0 +1,21 @@
+.index__about {
+  height: 100vh;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "about-img about-text";
+  .about-img {
+    grid-area: about-img;
+    background-image: url("../images/pexels-pixabay-210922.jpg");
+    background-size: cover;
+    border-radius: 0 0 $default_border_radius 0;
+  }
+  .about-text {
+    grid-area: about-text;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: $default_padding;
+    padding-bottom: $default_padding;
+  }
+}
