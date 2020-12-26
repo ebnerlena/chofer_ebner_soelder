@@ -312,7 +312,7 @@ section {
         font-size: 2rem;
         color: white; }
 
-.single__header {
+.single__header, .page__header {
   height: 40vh; }
 
 .footer {
@@ -657,6 +657,29 @@ section {
       border-radius: 0;
       margin-left: 0;
       margin-right: 0; } }
+
+.single__header {
+  background-color: #B57614; }
+  .single__header .single__post-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 100%;
+    text-underline-offset: 5px;
+    text-align: center;
+    text-decoration: underline; }
+
+.single__post-container {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  width: 50vw; }
+  @media (max-width: 900px) {
+    .single__post-container {
+      width: 90vw; } }
+  .single__post-container div {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+    .single__post-container div p {
+      line-height: 1.5; }
 
 h1 {
   font-family: "East Sea Dokdo";
