@@ -275,6 +275,7 @@ section {
     align-items: center;
     width: 20%;
     height: 14%;
+    min-height: 70px;
     color: white; }
     .content .music-player audio {
       outline: none; }
