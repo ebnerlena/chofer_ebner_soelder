@@ -17,11 +17,17 @@
 
   .music-player {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     width: 20%;
     height: 14%;
+    min-height:70px;
     color: white;
+
+    audio {
+      outline:none;
+    }
   }
 
   .book-now-button {
@@ -32,7 +38,7 @@
     color: white;
     background-color: $accentColor;
     width: 20%;
-    height: 14%;
+    height: 10vh;
     font-size: 3rem;
     font-weight: bold;
   }
@@ -70,6 +76,6 @@
   }
 }
 
-.single_header {
-  height: 50vh;
+.single__header, .page__header {
+  height: 40vh;
 }

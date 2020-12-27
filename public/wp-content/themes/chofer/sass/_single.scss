@@ -1,0 +1,31 @@
+.single__header {
+    background-color: $accentColor;
+    
+  
+    .single__post-title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      width:100%;
+      text-underline-offset: 5px;
+      text-align: center;
+      text-decoration: underline;
+    }
+}
+
+.single__post-container {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    width:50vw;
+
+    @include mobile {
+        width:90vw;
+    }
+
+    div {
+        margin-top: $default_margin;
+        margin-bottom: $default_margin;
+        p {
+            line-height: 1.5;
+        }
+    }
+}

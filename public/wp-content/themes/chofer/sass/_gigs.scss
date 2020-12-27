@@ -1,12 +1,22 @@
 .index__gigs {
   height: 60vh;
+  margin-bottom: 4rem;
+
+  @include mobile {
+    height: 110vh;
+  }
+
   .gigs__container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 90%;
-    overflow: hidden;
+
+    @include mobile {
+      flex-direction: column;
+      height: 100%;
+    }
 
     .gigs__single-post {
       width: 25%;
@@ -18,6 +28,11 @@
       justify-content: flex-start;
       align-items: center;
 
+      @include mobile {
+        width: 70%;
+        height: 30%;
+      }
+
       .gigs__top-header {
         background-color: $greyAccentColor;
         height: 10%;
@@ -26,6 +41,10 @@
         justify-content: center;
         align-items: center;
         border-radius: $default_border_radius $default_border_radius 0 0;
+
+        @include mobile {
+          height: 15%;
+        }
 
         h2 {
           color: black;
@@ -44,8 +63,19 @@
         background-color: rgba($primaryColor, 0.9);
         border-radius: $default_border_radius;
         margin-top: 15%;
+
+        @include mobile {
+          margin-top: 5%;
+          height: 40%;
+          width: 70%;
+        }
+
         h2 {
           margin: 0;
+          font-size: 1.4vw;
+          @include mobile {
+            font-size: 1.5rem;
+          }
         }
 
         .gigs__date,
@@ -54,6 +84,10 @@
         }
 
         .gigs__address {
+          font-size: 1.2vw;
+          @include mobile {
+            font-size: 1rem;
+          }
         }
       }
 
@@ -67,6 +101,9 @@
         border-radius: $default_border_radius;
         color: $basicTextColor;
         font-size: 1.5rem;
+        @include mobile {
+          margin-top: 5%;
+        }
       }
     }
   }
