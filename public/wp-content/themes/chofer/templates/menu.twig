@@ -1,10 +1,25 @@
 {% if mainmenu %}
-	<ul class="mainmenu-ul">
-	{% for item in items %}
-		<li class="{{ item.classes | join(' ') }}">
-			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% include "menu.twig" with {'items': item.children} %}
-		</li>
-	{% endfor %}
-	</ul>
+	<button class="hamburger hamburger--collapse" id="burger-button" type="button">
+		<span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		</span>
+	</button>
+	<nav id="normal-nav" class="nav-main" role="navigation">
+		<ul class="mainmenu-ul">
+			{% for item in items %}
+				<li class="{{ item.classes | join(' ') }}">
+					<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+	<nav id="burger-nav" class="nav-main" role="navigation">
+		<ul class="mainmenu-ul">
+			{% for item in items %}
+				<li class="{{ item.classes | join(' ') }}">
+					<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
 {% endif %}

@@ -2,13 +2,11 @@
 
 {% block header %}
     <section class="index__header">
-        <div class="topnav">
+        <div class="topnav" id="topnav">
             <h1 class="logo-h1" role="banner">
                 <a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
             </h1>
-            <nav id="nav-main" class="nav-main" role="navigation">
                 {% include "menu.twig" with {'items': mainmenu.get_items} %}
-            </nav><!-- #nav -->
         </div>
         <div class="content">
             <div class="music-player">
@@ -28,7 +26,7 @@
     <section class="index__about">
         <div class="about-img">
         </div>
-        <div class="about-text">
+        <div class="about-text maxwidthcontainer">
             <h2><span>Who</span> am I?</h2>
             <article>
                 <p>Hi, i’m <span>Chris!</span></p>
@@ -93,4 +91,5 @@
             <p>+43 664987612</p>
         </div>
     </section>
+
 {% endblock %}
