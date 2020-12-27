@@ -3,7 +3,7 @@
   margin-bottom: 4rem;
 
   @include mobile {
-    height: 110vh;
+    height: 130vh;
   }
 
   .gigs__container {
@@ -29,7 +29,7 @@
       align-items: center;
 
       @include mobile {
-        width: 70%;
+        width: 85%;
         height: 30%;
       }
 
@@ -67,14 +67,14 @@
         @include mobile {
           margin-top: 5%;
           height: 40%;
-          width: 70%;
+          width: 80%;
         }
 
         h2 {
           margin: 0;
           font-size: 1.4vw;
           @include mobile {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
           }
         }
 
@@ -84,7 +84,7 @@
         }
 
         .gigs__address {
-          font-size: 1.2vw;
+          font-size: 1.1vw;
           @include mobile {
             font-size: 1rem;
           }

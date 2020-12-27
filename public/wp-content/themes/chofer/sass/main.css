@@ -369,7 +369,6 @@ header > section {
 }
 @media (max-width: 900px) {
   .content .book-now-button {
-    width: 40%;
     font-size: 2rem;
   }
 }
@@ -394,7 +393,7 @@ header > section {
 }
 @media (max-width: 900px) {
   .topnav .logo-h1 a {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 }
 .topnav .hamburger {
@@ -638,6 +637,11 @@ header > section {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 900px) {
+  .index__services .services__number p {
+    font-size: 2rem;
+  }
+}
 
 .index__news {
   background-image: url("../images/pexels-erkan-utu-302655.jpg");
@@ -723,7 +727,7 @@ header > section {
 }
 @media (max-width: 900px) {
   .index__gigs {
-    height: 110vh;
+    height: 130vh;
   }
 }
 .index__gigs .gigs__container {
@@ -751,7 +755,7 @@ header > section {
 }
 @media (max-width: 900px) {
   .index__gigs .gigs__container .gigs__single-post {
-    width: 70%;
+    width: 85%;
     height: 30%;
   }
 }
@@ -789,7 +793,7 @@ header > section {
   .index__gigs .gigs__container .gigs__single-post .gigs__content {
     margin-top: 5%;
     height: 40%;
-    width: 70%;
+    width: 80%;
   }
 }
 .index__gigs .gigs__container .gigs__single-post .gigs__content h2 {
@@ -798,7 +802,7 @@ header > section {
 }
 @media (max-width: 900px) {
   .index__gigs .gigs__container .gigs__single-post .gigs__content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 .index__gigs .gigs__container .gigs__single-post .gigs__content .gigs__date,
@@ -806,7 +810,7 @@ header > section {
   font-weight: bold;
 }
 .index__gigs .gigs__container .gigs__single-post .gigs__content .gigs__address {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
 }
 @media (max-width: 900px) {
   .index__gigs .gigs__container .gigs__single-post .gigs__content .gigs__address {
