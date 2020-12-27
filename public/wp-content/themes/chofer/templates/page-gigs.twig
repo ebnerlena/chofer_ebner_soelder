@@ -1,0 +1,103 @@
+{% extends "base.twig" %}
+
+{% block head %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+	{% endblock %}
+
+
+{% block header %}
+	<section class="page__header" style="background-image: url('{{ post.thumbnail.src }}')">
+        <div class="topnav" id="topnav">
+					<h1 class="logo-h1" role="banner">
+						<a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
+					</h1>
+						{% include "menu.twig" with {'items': mainmenu.get_items} %}
+        </div>
+       <div class="content">
+            <div class="music-player">
+                <span>{{frontpage.meta("title")}}</span>
+                <audio controls>
+                    <source src={{frontpage.meta("audio")}}>
+                </audio>
+            </div>
+            <a href="#" class="book-now-button">
+                BOOK NOW!
+            </a>
+      </div>
+	</section>
+{% endblock %}
+
+{% block content %}
+<section class="gigs__container maxwidthcontainer">
+<h2> All Upcoming <span>Gigs</span> </h2>
+<div class="gigs__slider-container">
+ {% for post in gigs %}
+    <article>
+    <a href="{{post.link}}"> <h2> {{ post.meta('city') }}: {{ post.meta('venue') }} </h2> </a>
+    <h3>{{ post.meta('date') }} </h3>
+    <p>{{ post.meta('address') }} </p>
+     </article>
+  {% endfor %}
+  </div>
+    <div id="map" style="height: 40vh; width: auto;">
+        {% set coords = [] %}
+        {% for post in gigs %}
+              {% set coords = coords|merge([
+                 post.city
+                ])
+              %}
+        {% endfor %}
+      </div>
+  </section>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <!-- Load Esri Leaflet from CDN -->
+  <script src="https://unpkg.com/esri-leaflet@2.5.0/dist/esri-leaflet.js"
+    integrity="sha512-ucw7Grpc+iEQZa711gcjgMBnmd9qju1CICsRaryvX7HJklK0pGl/prxKvtHwpgm5ZHdvAil7YPxI1oWPOWK3UQ=="
+    crossorigin=""></script>
+    <script>
+
+      var map = L.map('map').setView([47.9, 14.0550], 7);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 20, 
+      minZoom: 4 }).addTo(map)
+      L.esri.basemapLayer('Topographic').addTo(map);
+      
+      var cities = {{ coords|json_encode }};
+
+      var guitarIcon = L.icon({
+        iconUrl: '/wp-content/themes/chofer/images/guitar.png',
+        iconSize:     [38, 95],
+        iconAnchor:   [22, 94], 
+        popupAnchor:  [-3, -76] 
+      });
+
+      const getCoordinates = (city)  => {
+        const url = `https://api.opencagedata.com/geocode/v1/json?q=${city}+&key={{API_KEY}}&language=en&pretty=2`
+        fetch(url)
+        .then((result) => result.json() )
+        .then((data) => {
+            if(data.status.code == 200 ){
+              addToMap(data.results[0].geometry)
+             
+            }
+            else {
+              reject(data)
+            }
+          })
+        .catch((e) => console.log("error: "+e.Message)) 
+      }
+
+      const addToMap = (city) => {
+        L.marker([city.lat, city.lng],  {icon: guitarIcon}).addTo(map)
+      }
+     
+     cities.forEach((c) => {
+      getCoordinates(c)
+     })
+      
+    </script>
+{% endblock %}

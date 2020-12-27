@@ -1,0 +1,53 @@
+.gigs__slider-container {
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    article {
+        width: fit-content;
+        margin:auto;
+
+        @include mobile {
+            width: 90vw;
+            margin:0;
+            margin-left: 4rem;      
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color:$accentColor;
+        }
+
+        h2 {
+            margin-left:0;
+        }
+    }
+
+    article:nth-child(even){
+        @include mobile {
+            text-align: right;
+            margin-right: 4rem;
+            margin-left:0;
+        }
+    }
+}
+
+#map {
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    border-radius: $default_border_radius;
+    margin-left:2rem; 
+    margin-right: 2rem;
+
+    @include mobile {
+        border-radius: 0;
+        margin-left:0;
+        margin-right:0;
+    }
+}

@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% block header %}
+	<section class="single__header">
+        <div class="topnav" id="topnav">
+            <h1 class="logo-h1" role="banner">
+                <a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
+            </h1>
+                {% include "menu.twig" with {'items': mainmenu.get_items} %}
+        </div>
+        <div class="content">
+            <h2 class="single__post-title"> {{ post.title }} </h2>
+        </div>
+	</section>
+{% endblock %}
+
+{% block content %}
+    <article class="single__post-container maxwidthcontainer"> 
+    <div> {{post.content }} </div>
+    </article>
+{% endblock %}
