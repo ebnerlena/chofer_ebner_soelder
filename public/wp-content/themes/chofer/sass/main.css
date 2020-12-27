@@ -762,12 +762,19 @@ section > h2 span {
 }
 
 .index__about {
-  height: 80vh;
+  height: auto;
   padding-top: 0;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   grid-template-areas: "about-img about-text";
+}
+@media (max-width: 900px) {
+  .index__about {
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 100%;
+    grid-template-areas: "about-img" "about-text";
+  }
 }
 .index__about .about-img {
   grid-area: about-img;
@@ -782,14 +789,29 @@ section > h2 span {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media (max-width: 900px) {
+  .index__about .about-text {
+    padding-left: 1rem;
+  }
+}
 .index__about .about-text h2 {
   font-size: 2.5rem;
+}
+@media (max-width: 900px) {
+  .index__about .about-text h2 {
+    margin-left: 1rem;
+  }
 }
 .index__about .about-text h2 span {
   font-weight: 800;
 }
 .index__about .about-text article {
   padding-right: 30%;
+}
+@media (max-width: 900px) {
+  .index__about .about-text article {
+    padding-right: 10%;
+  }
 }
 .index__about .about-text article p {
   font-size: 1.8rem;
