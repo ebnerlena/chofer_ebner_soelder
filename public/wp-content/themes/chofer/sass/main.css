@@ -310,6 +310,10 @@ section > h2 span {
   height: auto;
 }
 
+header > section {
+  padding-top: 0;
+}
+
 .index__header {
   height: 100vh;
   background-image: url("../images/pexels-edward-eyer-811838.jpg");
@@ -370,11 +374,15 @@ section > h2 span {
   }
 }
 
+.topnav-active {
+  background-color: #1e1f21;
+}
+
 .topnav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10%;
+  height: 10vh;
 }
 .topnav .logo-h1 {
   margin-left: 3%;
@@ -403,8 +411,9 @@ section > h2 span {
 .topnav #burger-nav {
   display: none;
   position: absolute;
-  top: 15%;
+  top: 10%;
   width: 100%;
+  background-color: #1e1f21;
 }
 .topnav #burger-nav ul {
   display: flex;
@@ -440,7 +449,7 @@ section > h2 span {
 
 .single__header,
 .page__header {
-  height: 40vh;
+  height: 50vh;
 }
 
 .footer {

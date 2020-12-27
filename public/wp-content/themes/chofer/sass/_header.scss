@@ -1,5 +1,11 @@
 @import "_colors.scss";
 
+header {
+  & > section {
+    padding-top: 0;
+  }
+}
+
 .index__header {
   //width: 100vw;
   height: 100vh;
@@ -7,6 +13,7 @@
   background-size: cover;
   padding-bottom: 0;
 }
+
 .content {
   margin: auto;
   display: flex;
@@ -60,11 +67,15 @@
   }
 }
 
+.topnav-active {
+  background-color: $primaryColor;
+}
+
 .topnav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10%;
+  height: 10vh;
 
   .logo-h1 {
     margin-left: 3%;
@@ -94,8 +105,9 @@
   #burger-nav {
     display: none;
     position: absolute;
-    top: 15%;
+    top: 10%;
     width: 100%;
+    background-color: $primaryColor;
 
     ul {
       display: flex;
@@ -138,5 +150,5 @@
 
 .single__header,
 .page__header {
-  height: 40vh;
+  height: 50vh;
 }

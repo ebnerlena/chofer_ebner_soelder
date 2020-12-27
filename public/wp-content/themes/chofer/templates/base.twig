@@ -42,13 +42,16 @@
 	 document.getElementById("burger-button").addEventListener("click", () => {
 		 let burgerNavDiv = document.getElementById("burger-nav");
 		 let hamburgerIcon = document.getElementById("burger-button");
+		 let topNav = document.getElementById("topnav");
 
 		 if (burgerNavDiv.style.display == "none") {
 			 hamburgerIcon.classList.add("is-active");
 			 burgerNavDiv.style.display = "block";
+             topNav.classList.add("topnav-active")
 		 } else {
 			 hamburgerIcon.classList.remove("is-active");
 			 burgerNavDiv.style.display = "none";
+             topNav.classList.remove("topnav-active")
 		 }
 	 });
 	</script>
