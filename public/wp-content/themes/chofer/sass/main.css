@@ -637,6 +637,11 @@ header > section {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 900px) {
+  .index__services .services__number p {
+    font-size: 2rem;
+  }
+}
 
 .index__news {
   background-image: url("../images/pexels-erkan-utu-302655.jpg");
