@@ -15,18 +15,28 @@
   width: 90%;
   height: 80%;
 
+  @include mobile {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   .music-player {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    width: 20%;
-    height: 14%;
-    min-height:70px;
+    width: auto;
+    height: auto;
+    min-height: 70px;
     color: white;
 
+    @include mobile {
+      margin-bottom: 10%;
+    }
+
     audio {
-      outline:none;
+      outline: none;
     }
   }
 
@@ -37,10 +47,16 @@
     border-radius: $default_border_radius;
     color: white;
     background-color: $accentColor;
-    width: 20%;
-    height: 10vh;
+    width: auto;
+    height: auto;
     font-size: 3rem;
     font-weight: bold;
+    padding: 25px;
+
+    @include mobile {
+      width: 40%;
+      font-size: 2rem;
+    }
   }
 }
 
@@ -56,11 +72,55 @@
       font-family: "East Sea Dokdo";
       font-size: 6rem;
       color: white;
+
+      @include mobile {
+        font-size: 5rem;
+      }
     }
   }
 
-  .nav-main {
+  .hamburger {
+    display: none;
+
+    .hamburger-box {
+      color: white;
+    }
+
+    @include mobile {
+      display: inline-block;
+    }
+  }
+
+  #burger-nav {
+    display: none;
+    position: absolute;
+    top: 15%;
+    width: 100%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-end;
+      list-style: none;
+      margin-right: $default_margin;
+      li {
+        a {
+          font-size: 2rem;
+          color: white;
+        }
+      }
+    }
+  }
+
+  #normal-nav {
+    display: block;
     width: 40%;
+
+    @include mobile {
+      display: none;
+    }
+
     ul {
       display: flex;
       justify-content: space-around;
@@ -76,6 +136,7 @@
   }
 }
 
-.single__header, .page__header {
+.single__header,
+.page__header {
   height: 40vh;
 }
