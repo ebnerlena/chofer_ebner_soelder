@@ -369,7 +369,6 @@ header > section {
 }
 @media (max-width: 900px) {
   .content .book-now-button {
-    width: 40%;
     font-size: 2rem;
   }
 }
@@ -394,7 +393,7 @@ header > section {
 }
 @media (max-width: 900px) {
   .topnav .logo-h1 a {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 }
 .topnav .hamburger {
