@@ -738,6 +738,9 @@ header nav ul .current-menu-item {
       .index__about .about-text article span {
         color: #b57614; }
 
+.gigs__header {
+  background-size: contain; }
+
 .gigs__slider-container {
   display: flex;
   flex-direction: row-reverse;
@@ -806,7 +809,7 @@ header nav ul .current-menu-item {
       color: #b57614;
       text-decoration: underline; }
 
-.page__header {
+.news__header {
   background-size: cover;
   background-position-y: center;
   background-position-x: center; }
