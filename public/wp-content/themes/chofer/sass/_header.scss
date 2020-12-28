@@ -4,6 +4,15 @@ header {
   & > section {
     padding-top: 0;
   }
+
+  nav {
+    ul {
+      .current-menu-item {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+    }
+  }
 }
 
 .index__header {
@@ -12,6 +21,10 @@ header {
   background-image: url("../images/pexels-edward-eyer-811838.jpg");
   background-size: cover;
   padding-bottom: 0;
+
+  @include mobile {
+    background-position-x: center;
+  }
 }
 
 .content {
@@ -44,6 +57,10 @@ header {
 
     audio {
       outline: none;
+
+      @include mobile {
+        width: 80vw;
+      }
     }
   }
 
@@ -62,6 +79,7 @@ header {
 
     @include mobile {
       font-size: 2rem;
+      padding:15px;
     }
   }
 }
@@ -91,6 +109,7 @@ header {
 
   .hamburger {
     display: none;
+    outline: none;
 
     .hamburger-box {
       color: white;

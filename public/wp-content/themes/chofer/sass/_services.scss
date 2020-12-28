@@ -19,6 +19,7 @@
 
     @include mobile {
       flex-direction: column;
+      margin-top: 0;
     }
 
     .single-service {

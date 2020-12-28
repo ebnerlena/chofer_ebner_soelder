@@ -9,8 +9,8 @@
 
 {% block header %}
 	<section class="page__header" style="background-image: url('{{ post.thumbnail.src }}')">
-        <div class="topnav" id="topnav">
-					<h1 class="logo-h1" role="banner">
+        <div class="topnav" id="topnav" role="banner">
+					<h1 class="logo-h1">
 						<a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
 						{% include "menu.twig" with {'items': mainmenu.get_items} %}
@@ -22,7 +22,7 @@
                     <source src={{frontpage.meta("audio")}}>
                 </audio>
             </div>
-            <a href="#" class="book-now-button">
+            <a href="/book-me" class="book-now-button">
                 BOOK NOW!
             </a>
       </div>

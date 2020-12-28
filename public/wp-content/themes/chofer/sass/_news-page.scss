@@ -1,0 +1,51 @@
+.page__header {
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center
+}
+
+.news-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 4rem;
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: $default_margin;
+    }
+
+    .single_news-post{
+        width: 40%;
+        height: 25vh;
+        border-radius: $default_border_radius;
+        padding: $default_padding;
+        margin-bottom: $default_margin;
+        margin-top: $default_margin;
+        box-shadow: 0 0 10px white;
+
+        &:hover {
+            box-shadow: 0 0 10px $accentColor;
+
+            a {
+                color: $accentColor;
+            }
+        }
+
+        @include mobile {
+            width: 80%;
+            height: fit-content;
+        }
+
+        a {
+            color: white;
+
+            h3 {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
