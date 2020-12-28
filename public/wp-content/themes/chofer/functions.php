@@ -112,22 +112,22 @@ function disable_emojis_remove_dns_prefetch($urls, $relation_type)
     }
     return $urls;
 }
-/*
+
  //remove stuff for all non admins
  function remove_menus() {
-	remove_menu_page( 'index.php' ); //Dashboard
-	remove_menu_page( 'edit.php' ); //Posts
-	remove_menu_page( 'upload.php' ); //Media
-	remove_menu_page( 'edit.php?post_type=page' ); //Pages
+	//remove_menu_page( 'index.php' ); //Dashboard
+	//remove_menu_page( 'edit.php' ); //Posts
+	//remove_menu_page( 'upload.php' ); //Media
+	//remove_menu_page( 'edit.php?post_type=page' ); //Pages
 	remove_menu_page( 'edit-comments.php' ); //Comments
-	remove_menu_page( 'themes.php' ); //Appearance
-	remove_menu_page( 'plugins.php' ); //Plugins
+	//remove_menu_page( 'themes.php' ); //Appearance
+	//remove_menu_page( 'plugins.php' ); //Plugins
 	remove_menu_page( 'users.php' ); //Users
 	remove_menu_page( 'tools.php' ); //Tools
-	remove_menu_page( 'options-general.php' ); //Settings
+	//remove_menu_page( 'options-general.php' ); //Settings
    }
    add_action( 'admin_menu', 'remove_menus' );
-
+/*
 
 // adapt admin dashboard: submenus
 function remove_submenus() {
@@ -145,7 +145,7 @@ function wp_customize_default_meta_boxes()
     remove_meta_box('authordiv', 'post', 'normal');
     remove_meta_box('commentstatusdiv', 'post', 'normal');
     remove_meta_box('commentsdiv', 'post', 'normal');
-    remove_meta_box('postexcerpt', 'post', 'normal');
+    //remove_meta_box('postexcerpt', 'post', 'normal');
     remove_meta_box('revisionsdiv', 'post', 'normal');
     remove_meta_box('slugdiv', 'post', 'normal');
     remove_meta_box('trackbacksdiv', 'post', 'normal');
@@ -298,7 +298,8 @@ class StarterSite extends Timber\Site
         $context['socialmenu']  = new Timber\Menu("social-menu");
         $context['services'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'services', 'order' => 'ASC']);
         $context['gigs'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'gigs', 'posts_per_page' => 3]);
-        $context['news'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'news', 'posts_per_page' => 3]);
+        $context['latestnews'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'news', 'posts_per_page' => 3]);
+        $context['news'] = Timber::get_posts(['post_type' => 'post', 'category_name' => 'news']);
         $context['frontpage'] = Timber::get_post(get_option("page_on_front"));
         $context['site']  = $this;
         return $context;
