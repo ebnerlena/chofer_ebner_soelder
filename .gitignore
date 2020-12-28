@@ -27,3 +27,5 @@ node-modules/
 *:Zone.Identifier
 
 docker-import.sh
+mysqldump*
+
