@@ -9,6 +9,10 @@
       text-underline-offset: 5px;
       text-align: center;
       text-decoration: underline;
+
+      @include mobile {
+        font-size: 1.8rem;
+    }
     }
 }
 

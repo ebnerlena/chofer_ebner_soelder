@@ -1,0 +1,41 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+
+    .wp-block-contact-form-7-contact-form-selector {
+        background-color: $accentColor;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: $default_padding;
+        padding-bottom: $default_padding;
+        border-radius: $default_border_radius;
+        margin-top: 1rem;
+        margin-bottom: $default_margin;
+    }
+
+    label {
+        span {
+            input, textarea {
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+        top:5px;
+    }
+
+    input[type=submit] {
+        background: $primaryColor;
+        outline: none;
+        border: none;
+        color: $greyAccentColor;
+        margin-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: $default_border_radius;
+    }
+}

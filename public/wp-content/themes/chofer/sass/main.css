@@ -348,6 +348,7 @@ header nav ul .current-menu-item {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding-top: 10vh;
   }
 }
 .content .music-player {
@@ -402,6 +403,17 @@ header nav ul .current-menu-item {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  z-index: 9999;
+  transition: all 0.3s linear;
+}
+@media (max-width: 900px) {
+  .topnav {
+    position: fixed;
+    width: 100vw;
+  }
+  .topnav.fixed {
+    background: #1e1f21;
+  }
 }
 .topnav .logo-h1 {
   margin-left: 3%;
@@ -431,7 +443,7 @@ header nav ul .current-menu-item {
 .topnav #burger-nav {
   display: none;
   position: absolute;
-  top: 10%;
+  top: 10vh;
   width: 100%;
   background-color: #1e1f21;
 }
@@ -544,6 +556,7 @@ header nav ul .current-menu-item {
 .footer .footer__top-container .top-container__right .footer__social-nav .social-nav__prefix {
   white-space: nowrap;
 }
+
 .footer .footer__top-container .top-container__right .footer__social-nav .social-nav__item-link {
   display: flex;
   flex-direction: column;
@@ -568,6 +581,7 @@ header nav ul .current-menu-item {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .footer .footer__top-container .top-container__right .footer__contact-details p {
   display: flex;
   justify-content: flex-start;
@@ -956,7 +970,7 @@ header nav ul .current-menu-item {
 }
 @media (max-width: 900px) {
   .index__about .about-text article p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 .index__about .about-text article p:first-of-type {
@@ -989,9 +1003,10 @@ header nav ul .current-menu-item {
 }
 @media (max-width: 900px) {
   .gigs__slider-container article {
-    width: 90vw;
-    margin: 0;
-    margin-left: 4rem;
+    width: auto;
+    max-width: 90%;
+    margin-left: 2rem;
+    margin-right: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -1005,8 +1020,8 @@ header nav ul .current-menu-item {
 @media (max-width: 900px) {
   .gigs__slider-container article:nth-child(even) {
     text-align: right;
-    margin-right: 4rem;
-    margin-left: 0;
+    margin-right: 2rem;
+    margin-left: 1rem;
   }
 }
 
@@ -1022,6 +1037,7 @@ header nav ul .current-menu-item {
     border-radius: 0;
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1036,7 +1052,11 @@ header nav ul .current-menu-item {
   text-align: center;
   text-decoration: underline;
 }
-
+@media (max-width: 900px) {
+  .single__header .single__post-title {
+    font-size: 1.8rem;
+  }
+}
 .single__post-container {
   margin-bottom: 4rem;
   margin-top: 4rem;
@@ -1083,7 +1103,7 @@ header nav ul .current-menu-item {
 }
 .news-container .single_news-post {
   width: 40%;
-  height: fit-content;
+  min-height: 25vh;
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -1107,6 +1127,39 @@ header nav ul .current-menu-item {
 }
 .news-container .single_news-post a h3 {
   text-transform: uppercase;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+.form-container .wp-block-contact-form-7-contact-form-selector {
+  background-color: #b57614;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.form-container label span input, .form-container label span textarea {
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.form-container .wpcf7-form-control-wrap {
+  top: 5px;
+}
+.form-container input[type=submit] {
+  background: #1e1f21;
+  outline: none;
+  border: none;
+  color: #c4c4c4;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 10px;
 }
 
 /*!
