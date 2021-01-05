@@ -20,7 +20,7 @@
 
     .single_news-post{
         width: 40%;
-        height: 25vh;
+        min-height: 25vh;
         border-radius: $default_border_radius;
         padding: $default_padding;
         margin-bottom: $default_margin;
