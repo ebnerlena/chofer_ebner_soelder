@@ -1,4 +1,4 @@
-<section class="footer__top-container">
+<section class="footer__top-container maxwidthcontainer">
     <div class="top-container__left"> 
         <nav class="footer__legal-nav"> 
             <ul>
@@ -16,7 +16,10 @@
         <ul>
             {% for item in socialmenu.items %}
                 <li class="social-nav__item {{ item.classes|join(' ') }}">
-                    <a class="social-nav__item-link" href="{{ item.link }}">{{ item.title }}</a>
+                    <a class="social-nav__item-link social-nav-item-{{ item.title }}" href="{{ item.link }}" target="_blank">
+                    <div class="social-nav-item-icon"></div>
+                    <p> </p>
+                    </a>
                 </li>
             {% endfor %}
             </ul>
