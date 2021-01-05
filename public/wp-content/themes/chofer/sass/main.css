@@ -487,6 +487,12 @@ header nav ul .current-menu-item {
 .footer {
   background-color: #1e1f21;
   color: #ffffff;
+  font-size: 1.1rem;
+}
+@media (max-width: 900px) {
+  .footer {
+    font-size: 0.9rem;
+  }
 }
 .footer .footer__top-container {
   height: 25vh;
@@ -498,6 +504,7 @@ header nav ul .current-menu-item {
     display: flex;
     flex-direction: column;
     height: auto;
+    margin-bottom: 4rem;
   }
 }
 .footer .footer__top-container ul {
@@ -537,15 +544,44 @@ header nav ul .current-menu-item {
 .footer .footer__top-container .top-container__right .footer__social-nav {
   color: #b57614;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-direction: row;
 }
 .footer .footer__top-container .top-container__right .footer__social-nav ul {
   margin-right: 2rem;
+  margin-left: 1rem;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 .footer .footer__top-container .top-container__right .footer__social-nav .social-nav__prefix {
   white-space: nowrap;
 }
+
+.footer .footer__top-container .top-container__right .footer__social-nav .social-nav__item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .footer__top-container .top-container__right .footer__social-nav .social-nav-item-icon {
+  width: 30px;
+  height: 30px;
+}
+.footer .footer__top-container .top-container__right .footer__social-nav .social-nav-item-Facebook .social-nav-item-icon {
+  background: url("../images/facebook.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.footer .footer__top-container .top-container__right .footer__social-nav .social-nav-item-Instagram .social-nav-item-icon {
+  background: url("../images/instagram.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.footer .footer__top-container .top-container__right .footer__social-nav .social-nav-item-Spotify .social-nav-item-icon {
+  background: url("../images/spotify.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .footer .footer__top-container .top-container__right .footer__contact-details p {
   display: flex;
   justify-content: flex-start;
@@ -558,7 +594,7 @@ header nav ul .current-menu-item {
   color: #c4c4c4;
 }
 .footer .footer__bottom-container {
-  height: 10vh;
+  height: 12vh;
   background-color: #b57614;
   color: #1e1f21;
   display: flex;
@@ -969,7 +1005,6 @@ header nav ul .current-menu-item {
   .gigs__slider-container article {
     width: auto;
     max-width: 90%;
-    margin: 0;
     margin-left: 2rem;
     margin-right: 1rem;
     margin-top: 1rem;
@@ -987,7 +1022,6 @@ header nav ul .current-menu-item {
     text-align: right;
     margin-right: 2rem;
     margin-left: 1rem;
-    margin-left: 0;
   }
 }
 
@@ -1023,7 +1057,6 @@ header nav ul .current-menu-item {
     font-size: 1.8rem;
   }
 }
-
 .single__post-container {
   margin-bottom: 4rem;
   margin-top: 4rem;
@@ -1095,7 +1128,6 @@ header nav ul .current-menu-item {
 .news-container .single_news-post a h3 {
   text-transform: uppercase;
 }
-
 .form-container {
   display: flex;
   justify-content: center;
