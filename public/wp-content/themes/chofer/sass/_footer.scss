@@ -2,6 +2,11 @@
 
     background-color: $primaryColor;
     color: $basicTextColor;
+    font-size: 1.1rem;
+
+    @include mobile {
+        font-size: 0.9rem;
+    }
 
     .footer__top-container {
         height:25vh;
@@ -12,6 +17,7 @@
             display:flex;
             flex-direction: column;
             height: auto;
+            margin-bottom: 4rem;
         }
 
         ul {
@@ -55,17 +61,48 @@
             .footer__social-nav {
                 color: $accentColor;
                 display: flex;
-                justify-content: space-between;
+                justify-content: start;
                 flex-direction: row;
 
                 ul {
                     margin-right: $default_margin;
+                    margin-left: 1rem;
+                    margin-top: 6px;
+                    margin-bottom: 0;
                 }
 
                 .social-nav__prefix {
                     white-space: nowrap;
                 }
 
+                .social-nav__item-link {
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .social-nav-item-icon {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .social-nav-item-Facebook .social-nav-item-icon {
+                    background: url("../images/facebook.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                .social-nav-item-Instagram .social-nav-item-icon {
+                    background: url("../images/instagram.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                .social-nav-item-Spotify .social-nav-item-icon {
+                    background: url("../images/spotify.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                
             }
 
             .footer__contact-details {
@@ -92,7 +129,7 @@
     }
 
     .footer__bottom-container {
-        height:10vh;
+        height:12vh;
         background-color: $accentColor;
         color: $primaryColor;
         display: flex;

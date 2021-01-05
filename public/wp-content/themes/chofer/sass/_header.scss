@@ -39,6 +39,7 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding-top: 10vh;
   }
 
   .music-player {
@@ -93,6 +94,17 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  z-index: 9999;
+  transition: all 0.3s linear;
+
+  @include mobile {
+    position: fixed;
+    width: 100vw;
+
+    &.fixed {
+      background: $primaryColor;
+    }
+  }
 
   .logo-h1 {
     margin-left: 3%;
@@ -123,7 +135,7 @@ header {
   #burger-nav {
     display: none;
     position: absolute;
-    top: 10%;
+    top: 10vh;
     width: 100%;
     background-color: $primaryColor;
 
