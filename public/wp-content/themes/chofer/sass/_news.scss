@@ -1,82 +1,87 @@
 .index__news {
-    background-image: url("../images/pexels-erkan-utu-302655.jpg");
-    background-size: cover;
+  background-image: url("../images/pexels-erkan-utu-302655.jpg");
+  background-size: cover;
 
-    .news__container {
+  .news__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 55%;
+    max-width: 40rem;
+    margin-left: 5rem;
+    align-self: start;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+
+    @include mobile {
+      width: 90vw;
+      margin-left: auto;
+      margin-bottom: 4rem;
+    }
+
+    .news__single-post {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: $default_border_radius;
+      height: 13vh;
+      width: 100%;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+
+      @include mobile {
+        height: 18vh;
+      }
+
+      transition: 0.5s ease all;
+      &:hover {
+        width: 110%;
+      }
+
+      .news__start-style {
+        background-color: $accentColor;
+        width: 20px;
+        height: 100%;
+        border-top-left-radius: $default_border_radius;
+        border-bottom-left-radius: $default_border_radius;
+      }
+
+      .news__content {
+        background-color: $greyAccentColor;
+        color: black;
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: $default_border_radius;
+        border-bottom-right-radius: $default_border_radius;
+        padding-left: $default_padding;
+        padding-right: 5rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        width: 55%;
-        max-width: 40rem;
-        margin-left: 5rem;
-        align-self: start;
-        margin-top: 4rem;
-        margin-bottom: 7rem;
+        justify-content: space-between;
 
         @include mobile {
-            width: 90vw;
-            margin-left:auto;
-            margin-bottom: 4rem;
+          padding-right: 0;
         }
 
-        .news__single-post {
-            display: flex;
-            flex-direction: row;
-            justify-content:flex-start;
-            align-items: center;
-            border-radius: $default_border_radius;
-            height: 13vh;
-            width: 100%;
-            margin-bottom: 1rem;
-            margin-top:1rem;
-
-            @include mobile {
-                height: 18vh;
-            }
-
-            .news__start-style {
-                background-color: $accentColor;
-                width: 20px;
-                height:100%;
-                border-top-left-radius: $default_border_radius;
-                border-bottom-left-radius: $default_border_radius;
-            }
-
-            .news__content {
-                background-color: $greyAccentColor;
-                color:black;
-                height:100%;
-                width: 100%;
-                border-top-right-radius: $default_border_radius;
-                border-bottom-right-radius: $default_border_radius;
-                padding-left: $default_padding;
-                padding-right: 5rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                @include mobile {
-                    padding-right: 0;
-                }
-
-                h3 {
-                    margin:0;
-                    padding-top: 5px;
-                }
-
-                p {
-                    display:flex;
-                    flex-direction: column;
-                    margin-top: 0.5rem;
-
-                    a {
-                        color:black;
-                        text-decoration: underline;
-                        font-weight: 800;
-                        margin-top: 0.5rem;
-                    }
-                }  
-            }
+        h3 {
+          margin: 0;
+          padding-top: 5px;
         }
+
+        p {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.5rem;
+
+          a {
+            color: black;
+            text-decoration: underline;
+            font-weight: 800;
+            margin-top: 0.5rem;
+          }
+        }
+      }
     }
+  }
 }

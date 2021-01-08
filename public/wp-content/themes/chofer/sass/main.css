@@ -547,12 +547,16 @@ header nav ul li {
       width: 35%;
       text-align: center;
       color: #ffffff;
-      padding-bottom: 3rem; }
+      padding-bottom: 3rem;
+      transition: 0.5s ease all; }
       @media (max-width: 900px) {
         .index__services .services__container .single-service {
           width: 90vw;
           margin-top: 2rem;
           margin-bottom: 2rem; } }
+      .index__services .services__container .single-service:hover {
+        opacity: 1;
+        transform: scale(1.02); }
       .index__services .services__container .single-service h3 {
         background-color: #c4c4c4;
         color: #1e1f21;
@@ -638,10 +642,13 @@ header nav ul li {
       height: 13vh;
       width: 100%;
       margin-bottom: 1rem;
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      transition: 0.5s ease all; }
       @media (max-width: 900px) {
         .index__news .news__container .news__single-post {
           height: 18vh; } }
+      .index__news .news__container .news__single-post:hover {
+        width: 110%; }
       .index__news .news__container .news__single-post .news__start-style {
         background-color: #b57614;
         width: 20px;
@@ -701,11 +708,15 @@ header nav ul li {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: center; }
+      align-items: center;
+      transition: 0.5s ease all; }
       @media (max-width: 900px) {
         .index__gigs .gigs__container .gigs__single-post {
           width: 100%;
           height: 30%; } }
+      .index__gigs .gigs__container .gigs__single-post:hover {
+        transform: scale(1.08);
+        box-shadow: -15px 0 #b57614; }
       .index__gigs .gigs__container .gigs__single-post .gigs__top-header {
         background-color: #c4c4c4;
         height: 10%;
@@ -780,10 +791,13 @@ header nav ul li {
     grid-area: about-img;
     background-image: url("../images/pexels-pixabay-210922.jpg");
     background-size: cover;
-    border-radius: 0 0 10px 0; }
+    border-radius: 0 0 10px 0;
+    transition: 0.5s ease filter; }
     @media (max-width: 900px) {
       .index__about .about-img {
         background-position-x: center; } }
+    .index__about .about-img:hover {
+      filter: brightness(125%); }
   .index__about .about-text {
     grid-area: about-text;
     padding-right: 10%;

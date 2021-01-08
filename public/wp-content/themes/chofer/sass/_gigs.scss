@@ -34,6 +34,12 @@
         height: 30%;
       }
 
+      transition: 0.5s ease all;
+      &:hover {
+        transform: scale(1.08);
+        box-shadow: -15px 0 $accentColor;
+      }
+
       .gigs__top-header {
         background-color: $greyAccentColor;
         height: 10%;
