@@ -11,6 +11,11 @@
         border-radius: $default_border_radius;
         margin-top: 1rem;
         margin-bottom: $default_margin;
+
+        @include mobile {
+            padding-left: 5rem;
+            padding-right: 0;
+        }
     }
 
     label {
@@ -24,6 +29,32 @@
 
     .wpcf7-form-control-wrap {
         top:5px;
+    }
+
+    .wpcf7-list-item > label {
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        input[type=radio] {
+            width: 5vw;
+
+            @include mobile {
+                width: 80vw;
+            }
+        }
+    }
+
+    .wpcf7-list-item-label {
+        @include mobile {
+            width: 20vw;
+        }
+    }
+
+    input, textarea {
+        @include mobile {
+            width: 80vw;
+        }
     }
 
     input[type=submit] {
