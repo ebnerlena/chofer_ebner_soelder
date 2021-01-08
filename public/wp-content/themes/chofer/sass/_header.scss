@@ -56,11 +56,21 @@ header {
       margin-bottom: 10%;
     }
 
+    & > span {
+
+      font-size: 1rem;
+
+      @include mobile {
+        font-size:0.9rem;
+      }
+    }
+
     audio {
       outline: none;
 
       @include mobile {
         width: 80vw;
+        max-width: 20rem;
       }
     }
   }

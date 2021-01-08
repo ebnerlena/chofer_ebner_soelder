@@ -366,12 +366,21 @@ header nav ul .current-menu-item {
     margin-bottom: 10%;
   }
 }
+.content .music-player > span {
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .content .music-player > span {
+    font-size: 0.9rem;
+  }
+}
 .content .music-player audio {
   outline: none;
 }
 @media (max-width: 900px) {
   .content .music-player audio {
     width: 80vw;
+    max-width: 20rem;
   }
 }
 .content .book-now-button {
@@ -556,7 +565,6 @@ header nav ul .current-menu-item {
 .footer .footer__top-container .top-container__right .footer__social-nav .social-nav__prefix {
   white-space: nowrap;
 }
-
 .footer .footer__top-container .top-container__right .footer__social-nav .social-nav__item-link {
   display: flex;
   flex-direction: column;
@@ -581,7 +589,6 @@ header nav ul .current-menu-item {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
 .footer .footer__top-container .top-container__right .footer__contact-details p {
   display: flex;
   justify-content: flex-start;
@@ -1005,6 +1012,7 @@ header nav ul .current-menu-item {
   .gigs__slider-container article {
     width: auto;
     max-width: 90%;
+    margin: 0;
     margin-left: 2rem;
     margin-right: 1rem;
     margin-top: 1rem;
@@ -1022,6 +1030,7 @@ header nav ul .current-menu-item {
     text-align: right;
     margin-right: 2rem;
     margin-left: 1rem;
+    margin-left: 0;
   }
 }
 
@@ -1057,6 +1066,7 @@ header nav ul .current-menu-item {
     font-size: 1.8rem;
   }
 }
+
 .single__post-container {
   margin-bottom: 4rem;
   margin-top: 4rem;
@@ -1128,6 +1138,7 @@ header nav ul .current-menu-item {
 .news-container .single_news-post a h3 {
   text-transform: uppercase;
 }
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -1142,12 +1153,41 @@ header nav ul .current-menu-item {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 900px) {
+  .form-container .wp-block-contact-form-7-contact-form-selector {
+    padding-left: 5rem;
+    padding-right: 0;
+  }
+}
 .form-container label span input, .form-container label span textarea {
   border-radius: 5px;
   margin-top: 5px;
 }
 .form-container .wpcf7-form-control-wrap {
   top: 5px;
+}
+.form-container .wpcf7-list-item > label {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.form-container .wpcf7-list-item > label input[type=radio] {
+  width: 5vw;
+}
+@media (max-width: 900px) {
+  .form-container .wpcf7-list-item > label input[type=radio] {
+    width: 80vw;
+  }
+}
+@media (max-width: 900px) {
+  .form-container .wpcf7-list-item-label {
+    width: 20vw;
+  }
+}
+@media (max-width: 900px) {
+  .form-container input, .form-container textarea {
+    width: 80vw;
+  }
 }
 .form-container input[type=submit] {
   background: #1e1f21;
