@@ -1,8 +1,13 @@
+.gigs__header {
+    background-size: contain;
+}
+
 .gigs__slider-container {
     display:flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-bottom: 4rem;
+    flex-wrap: wrap;
 
     @include mobile {
         flex-direction: column;
@@ -10,12 +15,15 @@
 
     article {
         width: fit-content;
+        max-width: 32%;
         margin:auto;
 
         @include mobile {
-            width: 90vw;
+            width:auto;
+            max-width: 90%;
             margin:0;
-            margin-left: 4rem;      
+            margin-left: 2rem; 
+            margin-right: 1rem;       
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
@@ -32,7 +40,8 @@
     article:nth-child(even){
         @include mobile {
             text-align: right;
-            margin-right: 4rem;
+            margin-right: 2rem;
+            margin-left: 1rem;  
             margin-left:0;
         }
     }
@@ -49,5 +58,6 @@
         border-radius: 0;
         margin-left:0;
         margin-right:0;
+        margin-bottom: 2rem;
     }
 }

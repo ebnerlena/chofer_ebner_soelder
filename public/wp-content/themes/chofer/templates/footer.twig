@@ -1,4 +1,4 @@
-<section class="footer__top-container">
+<section class="footer__top-container maxwidthcontainer">
     <div class="top-container__left"> 
         <nav class="footer__legal-nav"> 
             <ul>
@@ -16,13 +16,16 @@
         <ul>
             {% for item in socialmenu.items %}
                 <li class="social-nav__item {{ item.classes|join(' ') }}">
-                    <a class="social-nav__item-link" href="{{ item.link }}">{{ item.title }}</a>
+                    <a class="social-nav__item-link social-nav-item-{{ item.title }}" href="{{ item.link }}" target="_blank">
+                    <div class="social-nav-item-icon"></div>
+                    <p> </p>
+                    </a>
                 </li>
             {% endfor %}
             </ul>
         </nav>
         <div class="footer__contact-details"> 
-            <p><span>Phone: </span> <span><a href="tel:+43 664 987612">+43 664 987612</a></span></p>
+            <p><span>Phone: </span> <span><a href="tel:+43664987612">+43 664 987612</a></span></p>
             <p><span>Email: </span> <span><a href="mailto:chofer@gig.at">chofer@gig.at</a></span></p>
         </div>
     </div>

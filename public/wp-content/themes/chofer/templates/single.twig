@@ -2,8 +2,8 @@
 
 {% block header %}
 	<section class="single__header">
-        <div class="topnav" id="topnav">
-            <h1 class="logo-h1" role="banner">
+        <div class="topnav" id="topnav" role="banner">
+            <h1 class="logo-h1">
                 <a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
             </h1>
                 {% include "menu.twig" with {'items': mainmenu.get_items} %}

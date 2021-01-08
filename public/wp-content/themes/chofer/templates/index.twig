@@ -2,8 +2,8 @@
 
 {% block header %}
     <section class="index__header">
-        <div class="topnav" id="topnav">
-            <h1 class="logo-h1" role="banner">
+        <div class="topnav" id="topnav" role="banner">
+            <h1 class="logo-h1">
                 <a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
             </h1>
                 {% include "menu.twig" with {'items': mainmenu.get_items} %}
@@ -15,7 +15,7 @@
                     <source src={{frontpage.meta("audio")}}>
                 </audio>
             </div>
-            <a href="#" class="book-now-button">
+            <a href="/book-me" class="book-now-button">
                 BOOK NOW!
             </a>
         </div>
@@ -52,7 +52,7 @@
                         <h2 class="gigs__venue">{{post.meta("venue")}}</h2>
                         <span class="gigs__address">{{post.meta("address")}}</span>
                     </div>
-                    <a class="gigs__button" href="/book-me">Buy ticket</a>
+                    <a class="gigs__button" href="/book-me" target="_self">Buy ticket</a>
                 </article>
             {% endfor %}
         </div>
@@ -61,7 +61,7 @@
     <section class="index__news">
         <h2>Latest <span>News</span></h2>
         <div class="news__container maxwidthcontainer">
-            {% for post in news %}
+            {% for post in latestnews %}
                 <article class="news__single-post">
                     <div class="news__start-style"></div>
                     <div class="news__content">
@@ -79,7 +79,7 @@
             {% for post in services %}
                 <article class="single-service">
                     <h3>{{ post.title }} </h3> 
-                    <p> {{ post.content }} </p>
+                    <div> {{ post.content }} </div>
                     <a href="/book-me">Book</a>
                 </article>
             {% endfor %}
