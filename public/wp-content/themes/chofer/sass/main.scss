@@ -1,7 +1,12 @@
 @import "_normalize.scss", "_colors.scss", "_fonts.scss", "_mixins.scss",
   "_index.scss", "_header.scss", "_footer.scss", "_services.scss", "_news.scss",
-  "_gigs.scss", "_about.scss", "_gigs-page.scss", "_single.scss", '_news-page.scss',
-  '_bookme-page.scss', "hamburgers/hamburgers.scss";
+  "_gigs.scss", "_about.scss", "_gigs-page.scss", "_single.scss",
+  "_news-page.scss", "_bookme-page.scss", "_animations.scss",
+  "hamburgers/hamburgers.scss";
+
+html {
+  scroll-behavior: smooth;
+}
 
 h1 {
   font-family: "East Sea Dokdo";
