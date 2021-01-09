@@ -6,7 +6,7 @@
             <h1 class="logo-h1">
                 <a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
             </h1>
-                {% include "menu.twig" with {'items': mainmenu.get_items} %}
+            {% include "menu.twig" with {'items': mainmenu.get_items} %}
         </div>
         <div class="content">
             <div class="music-player">
@@ -15,6 +15,9 @@
                     <source src={{frontpage.meta("audio")}}>
                 </audio>
             </div>
+            <a class="header-icon-link" href="#index-about-anchor">
+                <svg class="header-icon-arrow-down"></svg>
+            </a>
             <a href="/book-me" class="book-now-button">
                 BOOK NOW!
             </a>
@@ -23,7 +26,7 @@
 {% endblock %}
 
 {% block content %}
-    <section class="index__about">
+    <section id="index-about-anchor" class="index__about">
         <div class="about-img">
         </div>
         <div class="about-text maxwidthcontainer">
@@ -70,6 +73,12 @@
                     </div>
                 </article>
             {% endfor %}
+        </div>
+
+        <div class="waves">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
         </div>
     </section>
 
