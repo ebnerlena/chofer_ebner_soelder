@@ -1,6 +1,8 @@
 .index__news {
+  position: relative;
   background-image: url("../images/pexels-erkan-utu-302655.jpg");
   background-size: cover;
+  overflow: hidden;
 
   .news__container {
     display: flex;
