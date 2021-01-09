@@ -37,6 +37,12 @@
         margin-bottom: $default_margin;
       }
 
+      transition: 0.5s ease all;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+
       h3 {
         background-color: $greyAccentColor;
         color: $primaryColor;

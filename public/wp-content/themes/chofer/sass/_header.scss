@@ -1,4 +1,5 @@
 @import "_colors.scss";
+@import "_animations.scss";
 
 header {
   & > section {
@@ -10,6 +11,10 @@ header {
       .current-menu-item {
         text-decoration: underline;
         text-underline-offset: 4px;
+      }
+
+      li {
+        @include nav-hover-animation;
       }
     }
   }
@@ -42,6 +47,28 @@ header {
     padding-top: 10vh;
   }
 
+  .header-icon-arrow-down {
+    position: absolute;
+    bottom: 10px;
+    width: 80px;
+    background: url("../images/down-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    outline: none;
+
+    @include mobile {
+      display: none;
+    }
+
+    &:hover {
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+      -o-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+  }
+
   .music-player {
     display: flex;
     justify-content: space-evenly;
@@ -57,11 +84,10 @@ header {
     }
 
     & > span {
-
       font-size: 1rem;
 
       @include mobile {
-        font-size:0.9rem;
+        font-size: 0.9rem;
       }
     }
 
@@ -90,8 +116,10 @@ header {
 
     @include mobile {
       font-size: 2rem;
-      padding:15px;
+      padding: 15px;
     }
+
+    @include button-hover-animation;
   }
 }
 

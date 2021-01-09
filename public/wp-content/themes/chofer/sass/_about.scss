@@ -19,9 +19,14 @@
     background-image: url("../images/pexels-pixabay-210922.jpg");
     background-size: cover;
     border-radius: 0 0 $default_border_radius 0;
+    transition: 0.5s ease filter;
 
     @include mobile {
       background-position-x: center;
+    }
+
+    &:hover {
+      filter: brightness(125%);
     }
   }
 
