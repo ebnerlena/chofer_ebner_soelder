@@ -36,8 +36,8 @@
 
       transition: 0.5s ease all;
       &:hover {
-        transform: scale(1.08);
-        box-shadow: -15px 0 $accentColor;
+        transform: scale(1.05);
+        // box-shadow: -15px 0 $accentColor;
       }
 
       .gigs__top-header {
