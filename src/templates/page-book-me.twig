@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block header %}
+	<section class="page__header news__header" style="background-image: url('{{ post.thumbnail.src }}')">
+        <div class="topnav" id="topnav" role="banner">
+					<h1 class="logo-h1">
+						<a class="logo-a" href="{{site.url}}" rel="home">{{site.name}}</a>
+					</h1>
+						{% include "menu.twig" with {'items': mainmenu.get_items} %}
+        </div>
+       <div class="content">
+            <div class="music-player">
+                <span>{{frontpage.meta("title")}}</span>
+                <audio controls>
+                    <source src={{frontpage.meta("audio")}}>
+                </audio>
+            </div>
+            <a href="/book-me#form" class="book-now-button">
+                BOOK NOW!
+            </a>
+      </div>
+	</section>
+{% endblock %}
+
+{% block content %}
+    <section class="contact-form maxwidthcontainer">
+     <h2> Leave a message </h2>
+     <div class="form-container"> 
+        {{ post.content }}
+    </div>
+    </section>
+    
+{% endblock %}
