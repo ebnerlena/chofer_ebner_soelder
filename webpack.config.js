@@ -122,9 +122,6 @@ module.exports = {
       {
         proxy: phpServerUrl,
         open: false
-      },
-      {
-        // reload: false
       }
     ),
     // clean dist folder before each build
@@ -161,14 +158,12 @@ module.exports = {
             from: 'src/templates/*',
             to: `${path.resolve(__dirname, themeFolder)}/templates`,
             flatten: true,
-            // copyUnmodified: true
           },
           {
             context: './src/php',
             from: '**',
             to: '',
             toType: 'dir',
-            // copyUnmodified: true
           },
         ]
       }),
