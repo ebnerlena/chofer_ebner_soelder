@@ -25,6 +25,7 @@ node_modules/
 public/wp-config.php
 node-modules/
 *:Zone.Identifier
+wp-config.php 
 
 docker-import.sh
 mysqldump*
