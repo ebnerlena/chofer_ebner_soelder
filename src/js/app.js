@@ -1,4 +1,6 @@
-window.addEventListener('scroll', function() {
+export function scrollListener() { 
+    
+    window.addEventListener('scroll', function() {
 
     if (window.pageYOffset > 100) {
         document.getElementById('topnav').classList.add("fixed");
@@ -7,3 +9,4 @@ window.addEventListener('scroll', function() {
     }
     
   });
+}

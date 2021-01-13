@@ -22,7 +22,6 @@ module.exports = {
     contentBase: './dist'
   },
 
-  // devtool: 'eval',
   module: {
     rules: [
 
