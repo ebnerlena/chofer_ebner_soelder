@@ -1,0 +1,79 @@
+.index__about {
+  height: auto;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "about-img about-text";
+
+  @include mobile {
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "about-img"
+      "about-text";
+  }
+
+  .about-img {
+    grid-area: about-img;
+    background-image: url("../images/pexels-pixabay-210922.jpg");
+    background-size: cover;
+    border-radius: 0 0 $default_border_radius 0;
+    transition: 0.5s ease filter;
+
+    @include mobile {
+      background-position-x: center;
+    }
+
+    &:hover {
+      filter: brightness(125%);
+    }
+  }
+
+  .about-text {
+    grid-area: about-text;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: $default_padding;
+    padding-bottom: $default_padding;
+
+    @include mobile {
+      padding-left: $default_padding;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+
+      @include mobile {
+        margin-left: $default_margin - $default_padding;
+        font-size: 2.2rem;
+      }
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    article {
+      padding-right: 30%;
+      @include mobile {
+        padding-right: 10%;
+      }
+      p {
+        font-size: 1.8rem;
+        line-height: 120%;
+        @include mobile {
+          font-size: 1.5rem;
+        }
+
+        &:first-of-type {
+          font-size: 2rem;
+        }
+      }
+
+      span {
+        color: $accentColor;
+      }
+    }
+  }
+}
