@@ -36,7 +36,7 @@
         }
 
         @include mobile {
-            width: 80vw;
+            width:auto;
             max-width: 90%;
             margin:0;
             margin-left: 2rem; 
@@ -46,14 +46,11 @@
         }
 
         a {
-            h2 {
-                color: $accentColor;
-                margin-left: 0;
-                transition: all 0.5s ease;
-            }
-            h3, p {
-                color: white;
-            }
+            color:$accentColor;
+        }
+
+        h2 {
+            margin-left:0;
         }
     }
 

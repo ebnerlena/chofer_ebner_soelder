@@ -28,6 +28,7 @@
 
       li {
         padding-right: $default_padding;
+
         @include nav-hover-animation;
         a {
           text-decoration: none;
