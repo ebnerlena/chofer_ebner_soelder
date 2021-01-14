@@ -1,4 +1,52 @@
+@import "_colors.scss";
+
 // KEYFRAMES
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px $accentColor, 0 0 15px $accentColor,
+      0 0 20px $accentColor, 0 0 40px $accentColor, 0 0 60px #ff0000,
+      0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px $accentColor, 0 0 15px $accentColor,
+      0 0 20px $accentColor, 0 0 40px $accentColor, 0 0 60px #ff0000,
+      0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
 @keyframes arrow-down-animation {
   0% {
     transform: translateY(0);
@@ -37,7 +85,6 @@
 }
 
 // ANIMATIONS
-
 .header-icon-arrow-down {
   animation-name: arrow-down-animation;
   animation-duration: 1.5s;
@@ -72,6 +119,18 @@
   -webkit-animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-out;
+}
+
+.headertext {
+  font-size: calc(20px + 18vh);
+  text-shadow: 0 0 5px $accentColor, 0 0 15px $accentColor,
+    0 0 20px $accentColor, 0 0 40px $accentColor, 0 0 60px #ff0000,
+    0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
 }
 
 .wave:nth-of-type(2) {
