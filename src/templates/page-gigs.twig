@@ -34,9 +34,9 @@
 <div class="gigs__slider-container">
  {% for post in gigs %}
     <article>
-    <a href="{{post.link}}"> <h2> {{ post.meta('city') }}: {{ post.meta('venue') }} </h2> </a>
+    <a href="{{post.link}}"> <h2> {{ post.meta('city') }}: {{ post.meta('venue') }} </h2>
     <h3>{{ post.meta('date') }} </h3>
-    <p>{{ post.meta('address') }} </p>
+    <p>{{ post.meta('address') }} </p>  </a>
      </article>
   {% endfor %}
   </div>

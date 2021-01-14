@@ -143,6 +143,67 @@
   -webkit-animation-delay: 2s;
 }
 
+.lines {
+  position: absolute;
+  top: 700px;
+  // left: 0;
+  right: 0;
+  height: 60vh;
+  margin: auto;
+  width: 40vw;
+
+  @include mobile {
+    display: none;
+  }
+
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.0);
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 1px;
+      height: 15vh;
+      width: 100%;
+      top: -50%;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 65%, white 100%);
+      animation: drop 8s 0s infinite;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+    
+    &:nth-child(1) {
+      margin-left: -25%;
+      &::after {
+        animation-delay: 2.5s;
+      }
+    }
+    &:nth-child(3) {
+      margin-left: 25%;
+      &::after {
+        animation-delay: 5s;
+      }
+    }
+  }
+}
+    
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
 // MIXINS
 @mixin button-hover-animation {
   transition: 0.5s ease transform;
@@ -151,9 +212,44 @@
   }
 }
 
-@mixin nav-hover-animation {
+@mixin nav-hover-animation { 
   transition: 0.5s ease transform;
   &:hover {
     transform: scale(1.15);
   }
+}
+
+@mixin news-article-hover-animation { 
+  transition: 0.5s ease all;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px white;
+
+    h3 {
+      color: $accentColor;
+    }
+  }
+}
+
+@mixin gig-article-hover-animation { 
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px white;
+    cursor: pointer;
+      h2 {
+          margin-left: 2rem;
+          transition: all 0.5s ease;
+      }
+      &:hover::before {
+        content: "";
+        background-position-x: right;
+        padding-right: 4rem;
+        opacity: 0.9;
+        position: absolute;
+        left: -20px;
+        transform: rotate(30deg);
+      }            
+  }
+
 }
