@@ -68,5 +68,19 @@
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         border-radius: $default_border_radius;
+        
+        @include button-hover-animation;
+        @include mobile {
+            width: 80%;
+        }
+    
+    }
+
+    form p {
+        width: 80%;
+        margin-left: 5%;
+        @include mobile {
+            width: 100%;
+        }
     }
 }

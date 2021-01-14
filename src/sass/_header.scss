@@ -93,11 +93,19 @@ header {
 
     audio {
       outline: none;
+      background: rgba(0, 0, 0, 0);
+      margin-top:5px;
 
       @include mobile {
         width: 80vw;
         max-width: 20rem;
       }
+
+      &::-webkit-media-controls-enclosure {
+        border-radius: $default_border_radius;
+        background-color: white;
+        margin-top: 5px;
+    }
     }
   }
 
