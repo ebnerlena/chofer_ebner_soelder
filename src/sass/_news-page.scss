@@ -27,13 +27,7 @@
         margin-top: $default_margin;
         box-shadow: 0 0 10px white;
 
-        &:hover {
-            box-shadow: 0 0 10px $accentColor;
-
-            a {
-                color: $accentColor;
-            }
-        }
+        @include news-article-hover-animation;
 
         @include mobile {
             width: 80%;
@@ -45,6 +39,7 @@
 
             h3 {
                 text-transform: uppercase;
+                transition: all 0.3s ease;
             }
         }
     }
