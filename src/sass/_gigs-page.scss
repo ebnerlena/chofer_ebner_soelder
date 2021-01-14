@@ -17,6 +17,22 @@
         width: fit-content;
         max-width: 32%;
         margin:auto;
+        border-radius: $default_border_radius;
+        padding-left: $default_padding;
+        padding-right: $default_padding;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        @include gig-article-hover-animation;
+
+        &::before {
+            background: url('../icons/guitar.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-x: left;
+            height: 50px;
+            transition: all 0.5s ease;
+        
+        }
 
         @include mobile {
             width:auto;
@@ -29,11 +45,14 @@
         }
 
         a {
-            color:$accentColor;
-        }
-
-        h2 {
-            margin-left:0;
+            h2 {
+                color: $accentColor;
+                margin-left: 0;
+                transition: all 0.5s ease;
+            }
+            h3, p {
+                color: white;
+            }
         }
     }
 
