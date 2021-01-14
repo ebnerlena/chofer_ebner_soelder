@@ -28,11 +28,13 @@
 
       li {
         padding-right: $default_padding;
-        @include nav-hover-animation;
-   
         a {
           text-decoration: none;
           color: $accentColor;
+        }
+
+        a:hover {
+          font-weight: 600;
         }
       }
     }
@@ -71,38 +73,32 @@
           white-space: nowrap;
         }
 
-        .social-nav__item {
+        .social-nav__item-link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .social-nav-item-icon {
+          width: 30px;
+          height: 30px;
+        }
 
-          @include nav-hover-animation;
-        
-          .social-nav__item-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-         
-            .social-nav-item-icon {
-              width: 30px;
-              height: 30px;
-            }
-          }
+        .social-nav-item-Facebook .social-nav-item-icon {
+          background: url("../icons/facebook.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
 
-          .social-nav-item-Facebook .social-nav-item-icon {
-            background: url("../icons/facebook.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
+        .social-nav-item-Instagram .social-nav-item-icon {
+          background: url("../icons/instagram.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
 
-          .social-nav-item-Instagram .social-nav-item-icon {
-            background: url("../icons/instagram.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
-
-          .social-nav-item-Spotify .social-nav-item-icon {
-            background: url("../icons/spotify.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-          }
+        .social-nav-item-Spotify .social-nav-item-icon {
+          background: url("../icons/spotify.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
         }
       }
 
