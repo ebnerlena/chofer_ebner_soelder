@@ -589,12 +589,18 @@ header nav ul li:hover {
 .content-bottom .music-player audio {
   outline: none;
   background: rgba(0, 0, 0, 0);
+  margin-top: 5px;
 }
 @media (max-width: 900px) {
   .content-bottom .music-player audio {
     width: 80vw;
     max-width: 20rem;
   }
+}
+.content-bottom .music-player audio::-webkit-media-controls-enclosure {
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 5px;
 }
 .content-bottom .book-now-button {
   display: flex;
@@ -1285,6 +1291,7 @@ header nav ul li:hover {
   background-position-x: left;
   height: 50px;
   transition: all 0.5s ease;
+  opacity: 0;
 }
 @media (max-width: 900px) {
   .gigs__slider-container article {
