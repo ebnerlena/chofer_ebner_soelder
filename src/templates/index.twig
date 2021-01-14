@@ -8,7 +8,11 @@
             </h1>
             {% include "menu.twig" with {'items': mainmenu.get_items} %}
         </div>
-        <div class="content">
+
+        <div class="content-headertext">
+            <h1 class="headertext">{{post.meta("header-text")}}</h1>
+        </div>
+        <div class="content-bottom">
             <div class="music-player">
                 <span>{{frontpage.meta("title")}}</span>
                 <audio controls>
