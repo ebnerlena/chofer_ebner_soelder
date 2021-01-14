@@ -1233,7 +1233,7 @@ header nav ul li:hover {
 }
 @media (max-width: 900px) {
   .gigs__slider-container article {
-    width: auto;
+    width: 80vw;
     max-width: 90%;
     margin: 0;
     margin-left: 2rem;
@@ -1255,7 +1255,8 @@ header nav ul li:hover {
     text-align: right;
     margin-right: 2rem;
     margin-left: 1rem;
-    margin-left: 0;
+    margin-left: 5vw;
+    width: 80vw;
   }
 }
 
