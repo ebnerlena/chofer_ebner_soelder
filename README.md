@@ -105,4 +105,5 @@ UPDATE wp_postmeta SET meta_value = replace(meta_value, 'https://chris.vm-qua.so
 ## Timeline
 
 Screendesign: due December, 21st - already approved
+
 Deployed to server: due January, 22nd - in progress
