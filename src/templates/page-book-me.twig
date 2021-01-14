@@ -8,11 +8,12 @@
 					</h1>
 						{% include "menu.twig" with {'items': mainmenu.get_items} %}
         </div>
-       <div class="content-headertext">
-            <h1 class="headertext">{{post.meta("header-text")}}</h1>
-        </div>
-       <div class="content-bottom">
-            <div class="empty-div">
+       <div class="content">
+            <div class="music-player">
+                <span>{{frontpage.meta("title")}}</span>
+                <audio controls>
+                    <source src={{frontpage.meta("audio")}}>
+                </audio>
             </div>
             <a href="/book-me#form" class="book-now-button">
                 BOOK NOW!
@@ -26,11 +27,6 @@
      <h2> Leave a message </h2>
      <div class="form-container"> 
         {{ post.content }}
-    </div>
-     <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
     </div>
     </section>
     
