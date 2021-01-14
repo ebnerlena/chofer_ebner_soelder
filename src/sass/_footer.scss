@@ -28,15 +28,10 @@
 
       li {
         padding-right: $default_padding;
-
         @include nav-hover-animation;
         a {
           text-decoration: none;
           color: $accentColor;
-        }
-
-        a:hover {
-          font-weight: 600;
         }
       }
     }
@@ -103,7 +98,6 @@
           background-repeat: no-repeat;
         }
       }
-    }
 
       .footer__contact-details {
         p {

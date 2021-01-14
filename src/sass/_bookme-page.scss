@@ -1,28 +1,58 @@
 .form-container {
     display: flex;
-    justify-content: center;
-
+    justify-content: start;
+    margin-left: 10vw;
+    @include mobile {
+        justify-content: center;
+        margin-left: 0;
+    }
     .wp-block-contact-form-7-contact-form-selector {
+        
         background-color: $accentColor;
+        box-shadow: 0 0 5px $accentColor;
+        z-index: 5;
         padding-left: 3rem;
         padding-right: 3rem;
         padding-top: $default_padding;
         padding-bottom: $default_padding;
-        border-radius: $default_border_radius;
-        margin-top: 1rem;
+        border-radius: 2rem;
+        margin-top: 3rem;
         margin-bottom: $default_margin;
+        width: 45vw;
+        max-width: 35rem;
 
         @include mobile {
-            padding-left: 5rem;
+            padding-left: 0;
             padding-right: 0;
+            width: 95vw;
         }
     }
 
     label {
+        @include mobile {
+            width: 80vw;
+        }
+
         span {
             input, textarea {
                 border-radius: 5px;
                 margin-top: 5px;
+                width: 80%;
+                border: 1px solid $primaryColor;
+                box-shadow: 0 0 2px $primaryColor;
+                transition: all 0.3s ease;
+                &:hover {
+                    box-shadow: 0 0 7px $primaryColor;
+                }
+            }
+            input {
+                height: 30px;
+          
+            }
+            textarea {
+                height: 200px;
+                resize: none;
+                overflow: auto;
             }
         }
     }
@@ -40,7 +70,7 @@
             width: 5vw;
 
             @include mobile {
-                width: 80vw;
+                width: 80%;
             }
         }
     }
@@ -51,22 +81,16 @@
         }
     }
 
-    input, textarea {
-        @include mobile {
-            width: 80vw;
-        }
-    }
-
     input[type=submit] {
         background: $primaryColor;
         outline: none;
         border: none;
-        color: $greyAccentColor;
+        color: white;
         margin-top: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
         border-radius: $default_border_radius;
         
         @include button-hover-animation;

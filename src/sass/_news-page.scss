@@ -26,8 +26,8 @@
         margin-bottom: $default_margin;
         margin-top: $default_margin;
         box-shadow: 0 0 10px white;
-        @include news-article-hover-animation;
 
+        @include news-article-hover-animation;
 
         @include mobile {
             width: 80%;
