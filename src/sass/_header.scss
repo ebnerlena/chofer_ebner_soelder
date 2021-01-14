@@ -98,6 +98,12 @@ header {
         width: 80vw;
         max-width: 20rem;
       }
+
+      &::-webkit-media-controls-enclosure {
+        border-radius: $default_border_radius;
+        background-color: white;
+        margin-top: 5px;
+      }
     }
   }
 

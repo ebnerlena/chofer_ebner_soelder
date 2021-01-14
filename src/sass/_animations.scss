@@ -98,3 +98,38 @@
     transform: scale(1.15);
   }
 }
+
+@mixin news-article-hover-animation { 
+  transition: 0.5s ease all;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px white;
+
+    h3 {
+      color: $accentColor;
+    }
+  }
+}
+
+@mixin gig-article-hover-animation { 
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px white;
+    cursor: pointer;
+      h2 {
+          margin-left: 2rem;
+          transition: all 0.5s ease;
+      }
+      &:hover::before {
+        content: "";
+        background-position-x: right;
+        padding-right: 4rem;
+        opacity: 0.9;
+        position: absolute;
+        left: -20px;
+        transform: rotate(30deg);
+      }            
+  }
+
+}
