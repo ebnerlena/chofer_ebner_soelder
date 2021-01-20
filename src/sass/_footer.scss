@@ -1,5 +1,5 @@
 .footer {
-  background-color: $primaryColor;
+  background-color: $lightPrimaryColor;
   color: $basicTextColor;
   font-size: 1.1rem;
 
@@ -36,8 +36,9 @@
       }
     }
     .top-container__left {
+      padding-right: 5%;
       ul {
-        justify-content: flex-start;
+        justify-content: flex-end;
         margin-left: $default_margin;
 
         @include mobile {
@@ -47,6 +48,7 @@
     }
 
     .top-container__right {
+      padding-left: 5%;
       justify-content: flex-end;
 
       @include mobile {
